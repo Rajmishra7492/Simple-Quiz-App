@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Quiz</h1>
+        
+        <!-- Timer and Progress Bar -->
+        <div class="quiz-header">
+            <div class="timer">
+                Time Remaining: <span id="time">02:00</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <div id="quiz">
+            <form id="quiz-form">
+                <!-- Questions will be dynamically inserted here -->
+            </form>
+            
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <button id="prev-btn" class="nav-btn">Previous</button>
+                <button id="next-btn" class="nav-btn">Next</button>
+                <button id="submit-btn" class="nav-btn">Submit Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Modal -->
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Quiz Results</h2>
+            <div id="result-content"></div>
+            <div id="history-content">
+                <h3>Previous Scores</h3>
+                <div id="scores-list"></div>
+            </div>
+            <button id="try-again-btn" class="nav-btn">Try Again</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
